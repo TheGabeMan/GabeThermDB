@@ -9,8 +9,8 @@ RUN apt-get install -y mysql-client libmysqlclient-dev
 RUN docker-php-ext-install mysqli
 
 # We need git to be installed so the code of the website is downloaded from github
-# RUN apt-get -y install git-core
-# RUN git clone https://github.com/TheGabeMan/NestReporter.git /var/www/html
-# ENV nest_user=thegabeman@gmail.com
-# ENV nest_pass=xxxxx
+RUN apt-get -y install git-core
+RUN git clone https://github.com/TheGabeMan/NestReporter.git /var/www/html
+ENV nest_user=thegabeman@gmail.com
+ENV nest_pass=xxxxx
 
